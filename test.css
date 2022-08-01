@@ -1,0 +1,42 @@
+.modal-body {
+    text-align: center;
+}
+
+.btn-primary {
+    color: #000;
+    background-color: #ededed;
+    border-color: #ededed;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+.visible {
+    display: none;
+}
+
+input[type=radio] {
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+}
+
+input[type=radio]:checked+label {
+    background-color: #ededed;
+    color: #000;
+}
+
+input[type=radio]+label {
+    border-radius: 4rem;
+    border: 1px solid #ededed;
+    display: inline-table;
+    margin: 0.4rem 0.5rem 0.2rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+}

@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="test.js"></script>
+</head>
+
+<body>
+    <div>
+        <!-- Button HTML (to Trigger Modal) -->
+        <button type="button" class="btn btn-primary" id="startBtn">CREATE A PANTY BOX</button>
+
+        <!-- Modal HTML -->
+        <form class="createBox" action="" method="post">
+            <div id="stepOneWindow" class="modal fade" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <a href="" data-dismiss="modal" style="text-align:center;">Close</a>
+                        <div class="modal-header">
+                            <h5 class="modal-title" style="margin: 0 auto; clear:both; text-align: center;">What's YourStyle?</h5>
+                        </div>
+                        <div class="modal-body">
+                            <fieldset>
+                                <input type="radio" id="styleCustom" name="custom_styles" value="Custom" form="">
+                                <label for="styleCustom">Custom</label>
+                                <input type="radio" id="styleMixed" name="mixed_styles" value="Mixed" form="">
+                                <label for="styleMixed">Mixed</label>
+                                <input type="radio" id="styleBriefs" name="briefs_styles" value="Briefs Only" form="">
+                                <label for="styleBriefs">Briefs Only</label>
+                            </fieldset>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="StepOneNExtBtn" type="submit" class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                    <div class="modal-content">
+                        <a href="" data-dismiss="modal" style="text-align:center;">Close</a>
+                        <div class="modal-header">
+                            <h5 class="modal-title" style="margin: 0 auto; clear:both;">What's Your Size?</h5>
+                        </div>
+                        <div class="modal-body">
+                            <fieldset>
+                                <input type="radio" id="sizeXS" name="xs_size" value="XS" form="">
+                                <label for="sizeXS">XS</label>
+                                <input type="radio" id="sizeSM" name="sm_size" value="SM" form="">
+                                <label for="sizeSM">SM</label>
+                                <input type="radio" id="sizeMD" name="md_size" value="MD" form="">
+                                <label for="sizeMD">MD</label>
+                                <input type="radio" id="sizeLG" name="lg_size" value="LG" form="">
+                                <label for="sizeLG">LG</label>
+                                <input type="radio" id="sizeXL" name="xl_size" value="XL" form="">
+                                <label for="sizeXL">XL</label>
+                                <input type="radio" id="size1X" name="1x_size" value="1X" form="">
+                                <label for="size1X">1X</label>
+                                <input type="radio" id="size2X" name="2x_size" value="2X" form="">
+                                <label for="size2X">2X</label>
+                                <input type="radio" id="size3X" name="3x_size" value="3X" form="">
+                                <label for="size3X">3X</label>
+                                <input type="radio" id="size4X" name="4x_size" value="4X" form="">
+                                <label for="size4X">4X</label>
+                            </fieldset>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="StepThreeNExtBtn" type="submit" class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                    <div class="modal-content">
+                        <a href="" data-dismiss="modal" style="text-align:center;">Close</a>
+                        <div class="modal-header">
+                            <h5 class="modal-title" style="margin: 0 auto; clear:both;">Choose Your Colors</h5>
+                        </div>
+                        <div class="modal-body">
+                            <fieldset>
+                                <input type="radio" id="colorMixed" name="mixed_color" value="Mixed" form="">
+                                <label for="colorMixed">Mixed</label>
+                                <input type="radio" id="colorNeutrals" name="neutrals_color" value="Neutrals" form="">
+                                <label for="colorNeutrals">Neutrals</label>
+                                <div id="customColors" class="visible">
+                                    <h3>Select 3</h3>
+                                    <input type="radio" id="colorBlack" name="blackthong_color" value="Black Thong"form="">
+                                    <label for="colorBlack">Black Thong</label>
+                                    <input type="radio" id="colorNude" name="nudebrief_color" value="Nude Brief"form="">
+                                    <label for="colorNude">Nude Brief</label>
+                                    <input type="radio" id="colorGrey" name="greycheeky_color" value="Grey Cheeky"form="">
+                                    <label for="colorGrey">Grey Cheeky</label>
+                                    <input type="radio" id="colorRed" name="redbrief_color" value="Red Brief" form="">
+                                    <label for="colorRed">Red Brief</label>
+                                    <input type="radio" id="colorBlue" name="bluebrief_color" value="Blue Brief"form="">
+                                    <label for="colorBlue">Blue Brief</label>
+                                    <input type="radio" id="colorGreen" name="greenbrief_color" value="Green Brief"form="">
+                                    <label for="colorGreen">Green Brief</label>
+                                    <input type="radio" id="colorWhite" name="whitebrief_color" value="White Brief"form="">
+                                    <label for="colorWhite">White Brief</label>
+                                    <input type="radio" id="colorBrown" name="brownbrief_color" value="Brown Brief"form="">
+                                    <label for="colorBrown">Brown Brief</label>
+                                    <input type="radio" id="colorPink" name="pinkbrief_color" value="Pink Brief"form="">
+                                    <label for="colorPink">Pink Brief</label>
+                                    <input type="radio" id="colorTeal" name="tealbrief_color" value="Teal Brief"form="">
+                                    <label for="colorTeal">Teal Brief</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="reviewBox" class="btn btn-primary" onclick="return reviewBox();"
+                                type="submit">Next</button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>
